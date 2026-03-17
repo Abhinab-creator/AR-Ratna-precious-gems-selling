@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <meta name="description" content="AR Ratna sells certified precious gemstones like Diamond, Ruby, Sapphire and Emerald in India.">
-    <meta name="keywords" content="AR Ratna, gemstones, diamond, ruby, sapphire, emerald">
+    <meta name="keywords" content="ar ratna">
     <meta name="author" content="AR Ratna">
     <meta name="google-site-verification" content="DnDT9WnuYggmnJ5cjZ6T6o79g0mMxy82gEtgkJZnKs8" />
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
     <style>
-        * {
+        *{
             box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
@@ -66,8 +66,7 @@
 
         /* PRODUCTS */
         .container {
-            color:rgb(255, 255, 255)
-            padding: 300px;
+            color:rgb(255, 255, 255);
         }
 
         .products {
@@ -77,12 +76,38 @@
             
         }
 
+
+        .content {
+            padding: 20px;
+            background: rgb(83, 30, 30);
+            border-radius: 10px;
+            width: 250px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2).2);
+        }
+
+
+        #settingsBar {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100%;
+            background: #222;
+            color: white;
+            padding: 20px;
+            transition: 0.3s;
+
+        }
+
+
         .card {
-            padding: 15px;
+            padding: 12px;
             border-radius: 8px;
+            margin-top: 12px;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             background: rgb(0, 0, 0);
+            border-spacing: 10px;
             color:grey
         }
 
@@ -138,7 +163,7 @@
     <a href="#">Gemstones</a>
     <a href="#">About</a>
     <a href="#">Contact us</a>
-</nav> -->
+</nav> --> 
 
 <div class="section">
     <h1>Premium Precious Gemstones</h1>
@@ -211,6 +236,14 @@
         <p>Phone: +91 9867147111</p>    
     </div>
 
+    <div id="settingsBar">
+        <h3>Settings</h3>
+        <button onclick="changeColor()">Change Text Color</button>
+        <br><br>
+        <button onclick="closeSettings()">Close</button>
+  </div>
+
+  <script src="script.js"></script>
 
 <footer>
     </p>© 2026 AR Ratna. All Rights Reserved.</p>
