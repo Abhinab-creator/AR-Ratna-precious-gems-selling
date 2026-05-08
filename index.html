@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
 
-    <title>AR Ratna | Precious Gemstones</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Ratna | Precious Gemstones</title>     
     <meta charset="UTF-8">
     <meta name="description" content="AR Ratna sells certified precious gemstones like Diamond, Ruby, Sapphire and Emerald in India.">
     <meta name="keywords" content="ar ratna">
@@ -23,8 +22,7 @@
         }
 
 
-        /* HEADER */
-        header {
+        header1 {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -71,35 +69,9 @@
 
         .products {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
             
         }
-
-
-        .content {
-            padding: 20px;
-            background: rgb(83, 30, 30);
-            border-radius: 10px;
-            width: 250px;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2).2);
-        }
-
-
-        #settingsBar {
-            position: fixed;
-            top: 0;
-            right: -300px;
-            width: 300px;
-            height: 100%;
-            background: #222;
-            color: white;
-            padding: 20px;
-            transition: 0.3s;
-
-        }
-
 
         .card {
             padding: 12px;
@@ -129,19 +101,23 @@
             color:white
         }
 
-        h1, h2 {
-            font-family: 'Parisienne';
+        h1 {
+            font-family: monospace;
             color: rgb(192, 137, 115);
             letter-spacing: 1px;
         }
 
-        p {
-            font-family: 'Parisienne'
-            
+        h2 {
+            font-family:monospace
+
+
         }
 
+        p{
+            font-family:monospace;
 
-        /* FOOTER */
+        }
+
         footer {
             background: #611d5b;
             color: rgb(255, 255, 255);
@@ -149,21 +125,58 @@
             padding: 10px ;
             margin-top: 20px;
         }
+
+        .typing-text {
+            font-size: 24px;
+            color: rgb(231, 233, 135);
+            text-align: center;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            font-family:monospace
+        }
+
+        #typing {
+            border-right: 3px solid rgb(255, 255, 255);
+            padding-right: 5px;
+            animation: blink 0.7s infinite;
+        }
+
+        @keyframes blink {
+            0% { border-color: rgb(255, 255, 255); }
+            50% { border-color: transparent; }
+            100% { border-color: rgb(255, 255, 255); }
+        }
+
+        header {
+            background: #000000;
+            padding: 25px;
+            text-align: center;
+        }
+
+        
     </style>
 </head>
 
 <body>
 
 <header>
-    <img src="logo.png" class="logo" alt="AR Ratna Logo">
+     <h3 class="typing-text">
+    <span id="typing"></span>
+    </h3>
 </header>
 
-<!-- <nav>
+    
+
+<header1>
+    <img src="logo.png" class="logo" alt="AR Ratna Logo">
+</header1>
+
+<nav>
     <a href="#">Home</a>
     <a href="#">Gemstones</a>
     <a href="#">About</a>
     <a href="#">Contact us</a>
-</nav> --> 
+</nav> 
 
 <div class="section">
     <h1>Premium Precious Gemstones</h1>
@@ -199,55 +212,45 @@
             <img src="aquamarine.jpeg" alt="">
             <h3>aquamarine</h3>
         </div>
-
-        <div class="card">
-            <img src="saphheir.jpeg">
-            <h3>saphheir ring</h3>
-        </div>
-        
-        <div class="card">
-            <img src="Beautiful lab made pink SHAPPIRE .jpeg">
-            <h3>Beautiful lab made pink SHAPPIRE💙      
-                Only at offer price at 7500/rs
-                All india shipping free
-                contact us on whatsapp only
-                Customised ring 💍 available.
-            </h3>
-        </div>
     </div>
 
     <div class="section">
-       <h2>About AR Ratna</h2>
-        <p>
+       <h1>About AR Ratna</h1>
+        <h2>
             AR Ratna provides certified and natural precious gemstones sourced
             from trusted suppliers. We believe in quality, purity, and customer trust.
-        </p>
+        </h2>
     </div>
 
     <div class="section">
-        <h2>Customization</h2>
-        <p>If you alos want to custonize your stone,ring,gem,bracelet or anything,just tell us a little bit about your customization in whatsapp on the given number.</p>
+        <h1>Customization</h1>
+        <h2>If you alos want to custonize your stone,ring,gem,bracelet or anything,just tell us a little bit about your customization in whatsapp on the given number.</h2>
             
     </div>
 
     <div class="section">
-        <h2>Contact Us</h2>
-        <p>Email:sathiroy123sr@gmail.com</p>
-        <p>Phone: +91 9867147111</p>    
+        <h1>Contact Us</h1>
+        <h2>Email:sathiroy123sr@gmail.com</h2>
+        <h2>Phone: +91 9867147111</h2>    
     </div>
-
-    <div id="settingsBar">
-        <h3>Settings</h3>
-        <button onclick="changeColor()">Change Text Color</button>
-        <br><br>
-        <button onclick="closeSettings()">Close</button>
-  </div>
-
-  <script src="script.js"></script>
 
 <footer>
     </p>© 2026 AR Ratna. All Rights Reserved.</p>
 </footer>
+<script>
+const text = "AR Ratna | sells | certified | precious | gemstones | like | Diamond | Ruby | Sapphire | and | Emerald | in | India.";
+let index = 0;
+const speed = 40;
 
-</html>
+function typeEffect() {
+    if (index < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, speed);
+    }
+}
+
+typeEffect();
+</script>
 </body>
+</html>
